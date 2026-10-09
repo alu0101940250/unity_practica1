@@ -11,8 +11,8 @@ public class moveCube11 : MonoBehaviour
         Vector3 direction = sphere.position - transform.position;
         direction.y = 0;
         
-        float stepThisFrame = speed * Time.deltaTime;
-        if(direction.magnitude > stepThisFrame){
+        float cubeDistPerFrame = speed * Time.deltaTime;
+        if(direction.magnitude > cubeDistPerFrame){
         direction = direction.normalized;
         transform.Translate(direction * speed * Time.deltaTime);}
     }
